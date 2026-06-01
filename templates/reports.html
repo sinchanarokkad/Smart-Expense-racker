@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <h2>Financial Reports</h2>
+        <hr>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card shadow mb-4">
+            <div class="card-header bg-white">
+                <h5 class="mb-0">Monthly Summary</h5>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-striped mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Month</th>
+                                <th>Total Income</th>
+                                <th>Total Expense</th>
+                                <th>Savings</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in monthly_data %}
+                            <tr>
+                                <td>{{ row.month }}</td>
+                                <td class="text-success">₹{{ "%.2f"|format(row.income) }}</td>
+                                <td class="text-danger">₹{{ "%.2f"|format(row.expense) }}</td>
+                                <td class="fw-bold">₹{{ "%.2f"|format(row.income - row.expense) }}</td>
+                            </tr>
+                            {% else %}
+                            <tr>
+                                <td colspan="4" class="text-center">No data available yet.</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow">
+            <div class="card-header bg-white">
+                <h5 class="mb-0">Quick Insights</h5>
+            </div>
+            <div class="card-body">
+                <p>Track your spending habits month over month to see where your money goes. Use the dashboard for a visual breakdown by category.</p>
+                <div class="d-grid mt-3">
+                    <a href="{{ url_for('add_transaction') }}" class="btn btn-primary">Add New Record</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
