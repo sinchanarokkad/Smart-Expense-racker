@@ -90,10 +90,3 @@ Smart-Expense-racker/
 └── README.md
 ```
 
-
-
-If you want next upgrade 🔥 I can:
-
-* make it **TOP 1% GitHub README (with badges + banner image)**
-* help you **deploy Flask app online**
-* or improve it for **placement resume project description** 🚀
