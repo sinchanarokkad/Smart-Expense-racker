@@ -1,4 +1,3 @@
-<img width="857" height="409" alt="final_report - Copy" src="https://github.com/user-attachments/assets/155365e3-121f-40f1-beea-00ddb94bc452" />📊 Smart Expense Tracker
 
 A Flask-based Personal Expense Tracker web application to manage income, expenses, and view financial reports in a simple dashboard format.
 
@@ -35,7 +34,6 @@ python app.py
 Then open:
 
 http://127.0.0.1:5000/
-📁 Project Structure
 Smart-Expense-racker/
 │
 ├── app.py
